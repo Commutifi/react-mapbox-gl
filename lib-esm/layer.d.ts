@@ -29,7 +29,7 @@ export interface LayerCommonProps {
     sourceLayer?: string;
     minZoom?: number;
     maxZoom?: number;
-    geoJSONSourceOptions?: MapboxGL.GeoJSONSourceOptions;
+    geoJSONSourceOptions?: any;
     filter?: any[];
     children?: JSX.Element | JSX.Element[];
 }
