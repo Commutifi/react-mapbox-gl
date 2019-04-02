@@ -70,7 +70,7 @@ export interface LayerCommonProps {
   sourceLayer?: string;
   minZoom?: number;
   maxZoom?: number;
-  geoJSONSourceOptions?: MapboxGL.GeoJSONSourceOptions;
+  geoJSONSourceOptions?: any;
   // tslint:disable-next-line:no-any
   filter?: any[];
   children?: JSX.Element | JSX.Element[];
