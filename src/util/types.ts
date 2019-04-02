@@ -1,13 +1,4 @@
-import {
-  VectorSource,
-  RasterSource,
-  GeoJSONSource,
-  GeoJSONSourceRaw,
-  RasterDemSource,
-  ImageSource,
-  VideoSource,
-  Point
-} from 'mapbox-gl';
+import { VectorSource, RasterSource, Point } from 'mapbox-gl';
 
 export interface AnchorOffsetLimits {
   'top-left': Point;
@@ -27,14 +18,7 @@ export interface AnchorsOffset extends AnchorOffsetLimits {
 export type Anchor = keyof AnchorsOffset;
 export type AnchorLimits = keyof AnchorOffsetLimits;
 
-export type Sources =
-  | VectorSource
-  | RasterSource
-  | GeoJSONSource
-  | GeoJSONSourceRaw
-  | ImageSource
-  | VideoSource
-  | RasterDemSource;
+export type Sources = any;
 
 export type TilesJson = VectorSource | RasterSource;
 

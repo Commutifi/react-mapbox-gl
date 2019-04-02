@@ -55,7 +55,7 @@ export interface Props extends LineProps, CircleProps, SymbolProps, FillProps, F
     id?: string;
     data: GeoJSON.Feature<GeoJSON.Geometry, GeoJSON.GeoJsonProperties> | GeoJSON.FeatureCollection<GeoJSON.Geometry> | string;
     layerOptions?: MapboxGL.Layer;
-    sourceOptions?: MapboxGL.VectorSource | MapboxGL.RasterSource | MapboxGL.GeoJSONSource | MapboxGL.GeoJSONSourceRaw;
+    sourceOptions?: any;
     before?: string;
     map: MapboxGL.Map;
 }
@@ -71,7 +71,7 @@ export declare class GeoJSONLayer extends React.Component<Props> {
     private unbind;
     componentWillMount(): void;
     componentWillUnmount(): void;
-    isGeoJSONSource: (source?: MapboxGL.VectorSource | MapboxGL.RasterSource | MapboxGL.RasterDemSource | MapboxGL.GeoJSONSource | MapboxGL.ImageSource | MapboxGL.VideoSource | MapboxGL.GeoJSONSourceRaw | undefined) => source is MapboxGL.GeoJSONSource;
+    isGeoJSONSource: (source?: any) => source is MapboxGL.GeoJSONSource;
     componentWillReceiveProps(props: Props): void;
     render(): null;
 }

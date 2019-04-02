@@ -70,7 +70,7 @@ export interface LayerCommonProps {
   sourceLayer?: string;
   minZoom?: number;
   maxZoom?: number;
-  geoJSONSourceOptions?: any;
+  geoJSONSourceOptions?: MapboxGL.GeoJSONSourceOptions;
   // tslint:disable-next-line:no-any
   filter?: any[];
   children?: JSX.Element | JSX.Element[];
@@ -104,7 +104,7 @@ export default class Layer extends React.Component<Props> {
     paint: {}
   };
 
-  private source: MapboxGL.GeoJSONSourceRaw = {
+  private source: any = {
     type: 'geojson',
     ...this.props.geoJSONSourceOptions,
     data: {

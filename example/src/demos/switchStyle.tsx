@@ -1,6 +1,5 @@
 import * as React from 'react';
 import ReactMapboxGl, { Layer, Source, Feature, GeoJSONLayer } from '../../../';
-import { GeoJSONSourceRaw } from 'mapbox-gl';
 
 import styled from 'styled-components';
 // tslint:disable-next-line:no-var-requires
@@ -50,7 +49,7 @@ const mapStyle = {
   width: '100%'
 };
 
-const GEOJSON_SOURCE_OPTIONS: GeoJSONSourceRaw = {
+const GEOJSON_SOURCE_OPTIONS: any = {
   type: 'geojson',
   data: {
     type: 'Feature',

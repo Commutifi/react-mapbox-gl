@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Map, GeoJSONSource, GeoJSONSourceRaw, Layer } from 'mapbox-gl';
+import { Map, GeoJSONSource, Layer } from 'mapbox-gl';
 import { TilesJson } from './util/types';
 import { withMap } from './context';
 
 export interface Props {
   id: string;
-  geoJsonSource?: GeoJSONSourceRaw;
+  geoJsonSource?: any;
   tileJsonSource?: TilesJson;
   map: Map;
   onSourceAdded?: (source: GeoJSONSource | TilesJson) => void;
